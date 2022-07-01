@@ -1,0 +1,28 @@
+package co.com.sofka.bus.entitys;
+
+import co.com.sofka.genericvalues.Capacidad;
+import co.com.sofka.bus.values.IdBodega;
+import co.com.sofka.domain.generic.Entity;
+import co.com.sofka.genericvalues.Estado;
+
+public class Bodega extends Entity<IdBodega> {
+    private Estado estado;
+    private Capacidad capacidad;
+
+    public Bodega(IdBodega entityId, Estado estado, Capacidad capacidad) {
+        super(entityId);
+        this.estado = estado;
+        this.capacidad = capacidad;
+    }
+    public void validarCapacacida(Capacidad capacidad){
+        this.capacidad=capacidad;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public Capacidad getCapacidad() {
+        return capacidad;
+    }
+}

@@ -30,12 +30,12 @@ public class Pasajero extends AggregateEvent<IdPasajero>{
         subscribe(new PasajeroEventChangue(this));
     }
 
-    public Pasajero(IdPasajero idPasajero, Nombre nombre, Identificacion identificacion, IdAsiento asiento) {
+    public Pasajero(IdPasajero idPasajero, Nombre nombre, Identificacion identificacion, Asiento asiento) {
         super(idPasajero);
         appendChange(new PasajeroCreado(nombre,identificacion,asiento)).apply();
     }
 
-    public static Pasajero pasajero(IdPasajero idPasajero , List<DomainEvent> events){
+    public static Pasajero from(IdPasajero idPasajero , List<DomainEvent> events){
         var pasajero = new Pasajero(idPasajero);
         events.forEach(pasajero::applyEvent);
         return pasajero;
@@ -63,6 +63,10 @@ public class Pasajero extends AggregateEvent<IdPasajero>{
         appendChange(new AsientoAsociado(idAsiento,identificacion,estado));
     }
     public void CancelarTicker(){
+
+    }
+
+    public void ActualizarIdentificacion(){
 
     }
 

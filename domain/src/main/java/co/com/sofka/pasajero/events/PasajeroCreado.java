@@ -11,9 +11,9 @@ import java.util.Set;
 public class PasajeroCreado extends DomainEvent {
     private final Nombre nombre;
     private final Identificacion identificacion;
-    private final IdAsiento asiento;
+    private final Asiento asiento;
 
-    public PasajeroCreado(Nombre nombre, Identificacion identificacion, IdAsiento asiento) {
+    public PasajeroCreado(Nombre nombre, Identificacion identificacion, Asiento asiento) {
         super("sofka.pasajero.event.PasajeroCreado");
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -28,7 +28,7 @@ public class PasajeroCreado extends DomainEvent {
         return identificacion;
     }
 
-    public IdAsiento getAsiento() {
+    public Asiento getAsiento() {
         return asiento;
     }
 }
