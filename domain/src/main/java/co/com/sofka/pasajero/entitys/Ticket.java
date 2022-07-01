@@ -5,7 +5,7 @@ import co.com.sofka.genericvalues.Estado;
 import co.com.sofka.pasajero.values.Fecha;
 import co.com.sofka.pasajero.values.IdTicket;
 import co.com.sofka.pasajero.values.Precio;
-import co.com.sofka.transportadora.values.Destino;
+import co.com.sofka.genericvalues.Destino;
 
 public class Ticket extends Entity<IdTicket> {
     private Precio precio;

@@ -5,14 +5,12 @@ import co.com.sofka.pasajero.values.Descripcion;
 import co.com.sofka.pasajero.values.IdEquipaje;
 import co.com.sofka.pasajero.values.Peso;
 
-import java.util.Objects;
-
 public class Equipaje extends Entity<IdEquipaje> {
     private Peso peso;
     private Descripcion descripcion;
 
-    public Equipaje(IdEquipaje entityId, Peso peso, Descripcion descripcion) {
-        super(entityId);
+    public Equipaje(IdEquipaje idEquipaje, Peso peso, Descripcion descripcion) {
+        super(idEquipaje);
         this.peso = peso;
         this.descripcion = descripcion;
     }
