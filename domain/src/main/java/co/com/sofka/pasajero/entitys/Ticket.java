@@ -1,11 +1,11 @@
 package co.com.sofka.pasajero.entitys;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.genericvalues.Estado;
+import co.com.sofka.genericvalue.Estado;
 import co.com.sofka.pasajero.values.Fecha;
 import co.com.sofka.pasajero.values.IdTicket;
 import co.com.sofka.pasajero.values.Precio;
-import co.com.sofka.genericvalues.Destino;
+import co.com.sofka.genericvalue.Destino;
 
 public class Ticket extends Entity<IdTicket> {
     private Precio precio;

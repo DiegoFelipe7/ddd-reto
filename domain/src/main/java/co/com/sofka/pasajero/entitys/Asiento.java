@@ -1,8 +1,8 @@
 package co.com.sofka.pasajero.entitys;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.genericvalues.Estado;
-import co.com.sofka.genericvalues.Identificacion;
+import co.com.sofka.genericvalue.Estado;
+import co.com.sofka.genericvalue.Identificacion;
 import co.com.sofka.pasajero.values.IdAsiento;
 
 public class Asiento extends Entity<IdAsiento> {
@@ -17,5 +17,13 @@ public class Asiento extends Entity<IdAsiento> {
 
     public void  CambiarEstado(Estado estado){
         this.estado=estado;
+    }
+
+    public Identificacion getIdentificacion() {
+        return identificacion;
+    }
+
+    public Estado getEstado() {
+        return estado;
     }
 }

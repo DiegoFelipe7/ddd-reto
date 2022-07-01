@@ -1,7 +1,6 @@
 package co.com.sofka.bus.values;
 
 import co.com.sofka.domain.generic.ValueObject;
-import co.com.sofka.genericvalues.Identificacion;
 
 import java.util.Objects;
 

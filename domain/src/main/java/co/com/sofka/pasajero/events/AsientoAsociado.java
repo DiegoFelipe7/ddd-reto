@@ -1,8 +1,8 @@
 package co.com.sofka.pasajero.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.genericvalues.Estado;
-import co.com.sofka.genericvalues.Identificacion;
+import co.com.sofka.genericvalue.Estado;
+import co.com.sofka.genericvalue.Identificacion;
 import co.com.sofka.pasajero.values.IdAsiento;
 
 public class AsientoAsociado extends DomainEvent {

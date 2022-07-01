@@ -3,12 +3,10 @@ package co.com.sofka.bus.events;
 import co.com.sofka.bus.entitys.Bodega;
 import co.com.sofka.bus.entitys.Conductor;
 import co.com.sofka.bus.entitys.Ruta;
-import co.com.sofka.bus.values.IdBus;
 import co.com.sofka.bus.values.Marca;
 import co.com.sofka.bus.values.Placa;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.genericvalues.Capacidad;
-import co.com.sofka.pasajero.Pasajero;
+import co.com.sofka.genericvalue.Capacidad;
 import co.com.sofka.pasajero.values.IdPasajero;
 
 import java.util.Set;

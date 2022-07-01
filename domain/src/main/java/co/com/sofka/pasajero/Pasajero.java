@@ -2,17 +2,14 @@ package co.com.sofka.pasajero;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.genericvalues.Destino;
-import co.com.sofka.genericvalues.Estado;
-import co.com.sofka.genericvalues.Identificacion;
-import co.com.sofka.genericvalues.Nombre;
+import co.com.sofka.genericvalue.Destino;
+import co.com.sofka.genericvalue.Estado;
+import co.com.sofka.genericvalue.Identificacion;
+import co.com.sofka.genericvalue.Nombre;
 import co.com.sofka.pasajero.entitys.Asiento;
 import co.com.sofka.pasajero.entitys.Equipaje;
 import co.com.sofka.pasajero.entitys.Ticket;
-import co.com.sofka.pasajero.events.AsientoAsociado;
-import co.com.sofka.pasajero.events.EquipajeRegistrado;
-import co.com.sofka.pasajero.events.PasajeroCreado;
-import co.com.sofka.pasajero.events.TicketComprado;
+import co.com.sofka.pasajero.events.*;
 import co.com.sofka.pasajero.values.*;
 
 import java.util.List;
@@ -66,8 +63,9 @@ public class Pasajero extends AggregateEvent<IdPasajero>{
 
     }
 
-    public void ActualizarIdentificacion(){
-
+    public void ActualizarIdentificacion(Identificacion identificacion){
+        Objects.requireNonNull(identificacion,"Campo obligatorio");
+        appendChange(new IdentificacionActualizada(identificacion));
     }
 
 

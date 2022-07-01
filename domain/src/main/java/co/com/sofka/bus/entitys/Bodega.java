@@ -1,9 +1,9 @@
 package co.com.sofka.bus.entitys;
 
-import co.com.sofka.genericvalues.Capacidad;
+import co.com.sofka.genericvalue.Capacidad;
 import co.com.sofka.bus.values.IdBodega;
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.genericvalues.Estado;
+import co.com.sofka.genericvalue.Estado;
 
 public class Bodega extends Entity<IdBodega> {
     private Estado estado;

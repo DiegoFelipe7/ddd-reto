@@ -19,8 +19,6 @@ s
 Cdomain/src/main/java/co/com/sofka/transportadora/Trasportadora.java,d\1\d1d9608677cf1bf554d29ca8f21933f3888054fa
 s
 Cdomain/src/main/java/co/com/sofka/transportadora/values/IdRuta.java,1\6\160418ae895a6ef741212fc77507d819ebd7224b
-q
-Adomain/src/main/java/co/com/sofka/pasajero/values/IdEquipaje.java,8\4\841bd7debbc1e21d883b1f9b359ab0589f3de055
 r
 Bdomain/src/main/java/co/com/sofka/transportadora/entityes/Bus.java,1\3\13e65e970f13a1a1a90e77d3cefcecbadeb3ab57
 r
@@ -36,12 +34,6 @@ Bdomain/src/main/java/co/com/sofka/pasajero/values/Descripcion.java,c\2\c28ffe0
 k
 ;domain/src/main/java/co/com/sofka/genericvalues/Estado.java,3\2\32d1a6291892cde883499f7e105c470d468b25a1
 p
-@domain/src/main/java/co/com/sofka/pasajero/values/IdAsiento.java,0\9\099706dabc1f72f1bf597cb2d276a1df264c878e
-p
 @domain/src/main/java/co/com/sofka/pasajero/entitys/Equipaje.java,3\8\38ed4fa740dd3a85d9fe8b38261ccbd63f864b78
-u
-Edomain/src/main/java/co/com/sofka/pasajero/events/TicketComprado.java,e\6\e64a7b48df45500b6b7733d3c31bf7f893193b71
 
 Odomain/src/main/java/co/com/sofka/pasajero/command/EliminarPasajeroCommand.java,0\6\06112a80bde9129ab8ac1c1beafdf2455a44d562
->
-domain/pom.xml,8\b\8b11330a6810846535e4b5ba2024ccfcee112862

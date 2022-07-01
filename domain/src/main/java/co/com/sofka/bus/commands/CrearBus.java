@@ -7,7 +7,7 @@ import co.com.sofka.bus.values.IdBus;
 import co.com.sofka.bus.values.Marca;
 import co.com.sofka.bus.values.Placa;
 import co.com.sofka.domain.generic.Command;
-import co.com.sofka.genericvalues.Capacidad;
+import co.com.sofka.genericvalue.Capacidad;
 import co.com.sofka.pasajero.values.IdPasajero;
 
 import java.util.Set;

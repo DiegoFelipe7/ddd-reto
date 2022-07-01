@@ -1,17 +1,16 @@
 package co.com.sofka.bus;
 
-import co.com.sofka.bus.commands.ActualizacionPlaca;
 import co.com.sofka.bus.entitys.Bodega;
 import co.com.sofka.bus.entitys.Conductor;
 import co.com.sofka.bus.entitys.Ruta;
 import co.com.sofka.bus.events.BusCreado;
+import co.com.sofka.bus.events.PasajerosAgregados;
 import co.com.sofka.bus.events.PlacaActualizada;
-import co.com.sofka.bus.values.IdBus;
-import co.com.sofka.bus.values.Marca;
-import co.com.sofka.bus.values.Placa;
+import co.com.sofka.bus.events.RutasAgregadas;
+import co.com.sofka.bus.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.genericvalues.Capacidad;
+import co.com.sofka.genericvalue.Capacidad;
 import co.com.sofka.pasajero.values.IdPasajero;
 
 import java.util.List;
@@ -56,5 +55,17 @@ public class Bus extends AggregateEvent<IdBus> {
         appendChange( new PlacaActualizada(placa));
     }
 
+    public void agregarPasajeros(IdPasajero idPasajero){
+        Objects.requireNonNull(idPasajero,"Campo obligatorio");
+        appendChange(new PasajerosAgregados(idPasajero));
+    }
+
+    public void agregarRuta(IdRuta idRuta , Salida salida ,Destino destino , Kilometro kilometro){
+        Objects.requireNonNull(idRuta,"Campo obligatorio");
+        Objects.requireNonNull(salida,"Campo obligatorio");
+        Objects.requireNonNull(destino,"Campo obligatorio");
+        Objects.requireNonNull(kilometro,"Campo obligatorio");
+        appendChange(new RutasAgregadas(idRuta,salida,destino,kilometro));
+    }
 
 }

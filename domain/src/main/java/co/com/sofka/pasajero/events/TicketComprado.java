@@ -1,11 +1,11 @@
 package co.com.sofka.pasajero.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.genericvalues.Estado;
+import co.com.sofka.genericvalue.Estado;
 import co.com.sofka.pasajero.values.Fecha;
 import co.com.sofka.pasajero.values.IdTicket;
 import co.com.sofka.pasajero.values.Precio;
-import co.com.sofka.genericvalues.Destino;
+import co.com.sofka.genericvalue.Destino;
 
 public class TicketComprado extends DomainEvent {
     private final IdTicket idTicket;

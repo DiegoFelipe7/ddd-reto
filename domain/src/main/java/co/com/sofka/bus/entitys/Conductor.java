@@ -3,8 +3,8 @@ package co.com.sofka.bus.entitys;
 import co.com.sofka.bus.values.IdConductor;
 import co.com.sofka.bus.values.Licencia;
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.genericvalues.Identificacion;
-import co.com.sofka.genericvalues.Nombre;
+import co.com.sofka.genericvalue.Identificacion;
+import co.com.sofka.genericvalue.Nombre;
 
 public class Conductor extends Entity<IdConductor> {
     private Nombre nombre;
