@@ -3,11 +3,11 @@ package co.com.sofka.pasajero;
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
-import co.com.sofka.pasajero.commands.ActualizarIdentificacion;
+import co.com.sofka.pasajero.commands.ActualizarIdentificacionCommands;
 
-public class ActualizarIdentificacionUseCase extends UseCase<RequestCommand<ActualizarIdentificacion>, ResponseEvents> {
+public class ActualizarIdentificacionUseCase extends UseCase<RequestCommand<ActualizarIdentificacionCommands>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<ActualizarIdentificacion> actualizarIdentificacionRequestCommand) {
+    public void executeUseCase(RequestCommand<ActualizarIdentificacionCommands> actualizarIdentificacionRequestCommand) {
         var command = actualizarIdentificacionRequestCommand.getCommand();
         var pasajero = Pasajero.from(command.getIdPasajero(),retrieveEvents(command.getIdPasajero().value()));
         if(command.getIdentificacion().equals("")){

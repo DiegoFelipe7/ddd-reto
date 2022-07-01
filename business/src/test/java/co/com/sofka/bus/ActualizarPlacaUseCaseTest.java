@@ -1,6 +1,6 @@
 package co.com.sofka.bus;
 
-import co.com.sofka.bus.commands.ActualizacionPlaca;
+import co.com.sofka.bus.commands.ActualizacionPlacaCommands;
 import co.com.sofka.bus.entitys.Bodega;
 import co.com.sofka.bus.entitys.Conductor;
 import co.com.sofka.bus.entitys.Ruta;
@@ -20,7 +20,6 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.ArgumentMatchers;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 
 import java.util.HashSet;
@@ -41,7 +40,7 @@ public class ActualizarPlacaUseCaseTest {
     @Test
    public void ActualizarPlacaBus(){
         //arrage
-        var command = new ActualizacionPlaca(IdBus.of("125"),new Placa("PWA12E"));
+        var command = new ActualizacionPlacaCommands(IdBus.of("125"),new Placa("PWA12E"));
         Mockito.when(repository.getEventsBy(ArgumentMatchers.any())).thenReturn(eventPlacaActualizada());
 
         //act
@@ -52,16 +51,16 @@ public class ActualizarPlacaUseCaseTest {
 
         var events = response.getDomainEvents();
         //assert
-        PlacaActualizada actualizacionPlaca = (PlacaActualizada) events.get(0);
-        Assertions.assertEquals("sofka.bus.event.PlacaActualizada" ,actualizacionPlaca.type);
-        Assertions.assertEquals("PWA12E",actualizacionPlaca.getPlaca().value());
+        PlacaActualizada actualizacionPlacaTest = (PlacaActualizada) events.get(0);
+        Assertions.assertEquals("sofka.bus.event.PlacaActualizada" ,actualizacionPlacaTest.type);
+        Assertions.assertEquals("PWA12E",actualizacionPlacaTest.getPlaca().value());
     }
     public List<DomainEvent> eventPlacaActualizada(){
         Set<IdPasajero> pasajeroSet = new HashSet<>();
         Set<Ruta> rutaSet = new HashSet<>();
         Marca marca = new Marca("Toyota");
         Placa placa = new Placa("XYH04E");
-        Capacidad capacidad = new Capacidad(30);
+        Capacidad capacidad = new Capacidad(11);
         pasajeroSet.add(IdPasajero.of("1"));
         Conductor conductor = new Conductor(IdConductor.of("12"), new Nombre("Diego"),new Licencia("105887asd") , new Identificacion(1058788349));
         Bodega bodega = new Bodega(IdBodega.of("12"), new Estado(false) , new Capacidad(50));

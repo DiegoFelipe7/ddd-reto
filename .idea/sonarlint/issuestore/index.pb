@@ -1,10 +1,4 @@
 
-l
-<domain/src/main/java/co/com/sofka/pasajero/values/Fecha.java,2\b\2bc8942815147afa4461b31f5d44db93106001f4
-k
-;domain/src/main/java/co/com/sofka/pasajero/values/Peso.java,f\e\fe969a27051909cb73eb7fdaf7224702a2b2d82d
-m
-=domain/src/main/java/co/com/sofka/pasajero/values/Precio.java,b\b\bb01242d04e37a7350b833d3c16e5a93a4113942
 r
 Bdomain/src/main/java/co/com/sofka/pasajero/values/Descripcion.java,c\2\c28ffe06b762cdd9e1b67cdef2d53718cc27aa54
 p
@@ -19,14 +13,10 @@ q
 Adomain/src/main/java/co/com/sofka/pasajero/values/IdPasajero.java,7\e\7e8165a17ea258d545a1898435c54a098e72e3d9
 h
 8domain/src/main/java/co/com/sofka/bus/values/IdRuta.java,0\0\001614d8dd2528e63cc5460e50d076410f275881
-i
-9domain/src/main/java/co/com/sofka/bus/values/Destino.java,a\9\a91a22ab34e14b32c0d49883dbb57b237812caf8
 j
 :domain/src/main/java/co/com/sofka/bus/values/Licencia.java,2\2\22401d64f1a5ecf702777715ef7ce11ad5464218
 k
 ;domain/src/main/java/co/com/sofka/bus/values/Kilometro.java,7\2\72a0e3f0c110a10bf80b06fa66b98f8d59037604
-m
-=domain/src/main/java/co/com/sofka/genericvalue/Capacidad.java,e\0\e0b7a1015cb9b746ad68b76bb8dbf13c149d75bd
 i
 9domain/src/main/java/co/com/sofka/bus/entitys/Bodega.java,4\9\49407352a25a91018288a4b572e272e8ce9dcd4a
 h
@@ -57,15 +47,11 @@ j
 :domain/src/main/java/co/com/sofka/bus/BusEventChangue.java,0\a\0a54f837e7d70f911cfb48dfaa0817c6cd80b97c
 g
 7domain/src/main/java/co/com/sofka/bus/entitys/Ruta.java,4\7\47b0ccd47e76999f838267a6f5f4e5aaa31b93a0
-t
-Ddomain/src/main/java/co/com/sofka/pasajero/PasajeroEventChangue.java,f\c\fc6c09e3253e51653843e2502b1f78b0378fd735
 l
 <domain/src/main/java/co/com/sofka/bus/commands/CrearBus.java,c\0\c027e535849dcad33773ae855131744b4665e9cc
 l
 <business/src/main/java/co/com/sofka/bus/CrearBusUseCase.java,4\2\425b915d4ec6efa0c79af3b7b9df130959760947
 q
 Adomain/src/main/java/co/com/sofka/pasajero/values/IdEquipaje.java,8\4\841bd7debbc1e21d883b1f9b359ab0589f3de055
-p
-@domain/src/main/java/co/com/sofka/pasajero/values/IdAsiento.java,0\9\099706dabc1f72f1bf597cb2d276a1df264c878e
 m
 =domain/src/main/java/co/com/sofka/bus/values/IdConductor.java,b\3\b398d689955fc585b6a22655f01b75affb66b6ae

@@ -19,17 +19,19 @@ import java.util.Set;
 public class Pasajero extends AggregateEvent<IdPasajero>{
     protected Nombre nombre;
     protected Identificacion identificacion;
-    protected Asiento asiento;
+
     protected Set<Ticket> ticket;
     protected Set<Equipaje> equipaje;
+
+    protected Asiento asiento;
     public Pasajero(IdPasajero entityId) {
         super(entityId);
         subscribe(new PasajeroEventChangue(this));
     }
 
-    public Pasajero(IdPasajero idPasajero, Nombre nombre, Identificacion identificacion, Asiento asiento) {
-        super(idPasajero);
-        appendChange(new PasajeroCreado(nombre,identificacion,asiento)).apply();
+    public Pasajero(IdPasajero entityId, Nombre nombre, Identificacion identificacion, Set<Ticket> ticket, Set<Equipaje> equipaje, Asiento asiento) {
+        super(entityId);
+        appendChange(new PasajeroCreado(nombre,identificacion,ticket,equipaje,asiento)).apply();
     }
 
     public static Pasajero from(IdPasajero idPasajero , List<DomainEvent> events){
