@@ -1,32 +1,36 @@
-package co.com.sofka.trasportadora.events;
+package co.com.sofka.trasportadora.commands;
 
-import co.com.sofka.bus.Bus;
 import co.com.sofka.bus.values.IdBus;
-import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.genericvalue.Nombre;
 import co.com.sofka.trasportadora.entitys.Cedes;
 import co.com.sofka.trasportadora.entitys.Contratacion;
 import co.com.sofka.trasportadora.entitys.Nomina;
+import co.com.sofka.trasportadora.values.IdTrasportadora;
 import co.com.sofka.trasportadora.values.Nit;
 
 import java.util.Set;
 
-public class TrasportadoraCreada extends DomainEvent {
+public class CrearTrasportadora {
+    private final IdTrasportadora idTrasportadora;
     private final Nit nit;
     private final Nombre nombre;
-    private final Set<IdBus> busSet;
+    private final Set<IdBus> idBuses;
     private final Nomina nomina;
     private final Set<Contratacion> contratacionSet;
     private final Set<Cedes> cedesSet;
 
-    public TrasportadoraCreada( Nit nit, Nombre nombre, Set<IdBus> busSet, Nomina nomina, Set<Contratacion> contratacionSet, Set<Cedes> cedesSet) {
-        super("sofka.trasportadora.event.TrasportadoraCreada");
+    public CrearTrasportadora(IdTrasportadora idTrasportadora, Nit nit, Nombre nombre, Set<IdBus> idBuses, Nomina nomina, Set<Contratacion> contratacionSet, Set<Cedes> cedesSet) {
+        this.idTrasportadora = idTrasportadora;
         this.nit = nit;
         this.nombre = nombre;
-        this.busSet = busSet;
+        this.idBuses = idBuses;
         this.nomina = nomina;
         this.contratacionSet = contratacionSet;
         this.cedesSet = cedesSet;
+    }
+
+    public IdTrasportadora getIdTrasportadora() {
+        return idTrasportadora;
     }
 
     public Nit getNit() {
@@ -37,8 +41,8 @@ public class TrasportadoraCreada extends DomainEvent {
         return nombre;
     }
 
-    public Set<IdBus> getBusSet() {
-        return busSet;
+    public Set<IdBus> getIdBuses() {
+        return idBuses;
     }
 
     public Nomina getNomina() {

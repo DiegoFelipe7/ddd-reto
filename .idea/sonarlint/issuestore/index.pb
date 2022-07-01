@@ -27,8 +27,6 @@ g
 7domain/src/main/java/co/com/sofka/bus/values/Marca.java,5\4\54c669baa3fde93b1fae8b40ee45c18920bcc9be
 Å
 Qdomain/src/main/java/co/com/sofka/pasajero/commands/ActualizarIdentificacion.java,5\1\51787face9c8a7d54252f8262832bb014c7bcf0a
-y
-Idomain/src/main/java/co/com/sofka/pasajero/events/EquipajeRegistrado.java,c\7\c77d737be00376011e5a0aef4e260f56efd17c76
 v
 Fdomain/src/main/java/co/com/sofka/pasajero/events/AsientoAsociado.java,4\e\4e38be9438255c276ca99e4d02d6a0e6aac9f687
 p
