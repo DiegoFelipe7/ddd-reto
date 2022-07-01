@@ -1,11 +1,12 @@
 package co.com.sofka.bus;
 
-import co.com.sofka.bus.commands.ActualizacionPlaca;
+
+import co.com.sofka.bus.commands.AgregarRuta;
 import co.com.sofka.bus.entitys.Bodega;
 import co.com.sofka.bus.entitys.Conductor;
 import co.com.sofka.bus.entitys.Ruta;
 import co.com.sofka.bus.events.BusCreado;
-import co.com.sofka.bus.events.PlacaActualizada;
+import co.com.sofka.bus.events.RutasAgregadas;
 import co.com.sofka.bus.values.*;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
@@ -16,49 +17,54 @@ import co.com.sofka.genericvalue.Estado;
 import co.com.sofka.genericvalue.Identificacion;
 import co.com.sofka.genericvalue.Nombre;
 import co.com.sofka.pasajero.values.IdPasajero;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.mockito.ArgumentMatchers;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class ActualizarPlacaUseCaseTest {
+import static org.mockito.Mockito.when;
 
-
-    private ActualizarPlacaUseCase actualizarPlacaUseCase;
-    DomainEventRepository repository;
-    @BeforeEach
+public class AgregarRutaUseCaseTest {
+    private AgregarRutaUseCase agregarRutaUseCase;
+    private DomainEventRepository repository;
+    @Before
     public void setUp(){
-        actualizarPlacaUseCase= new ActualizarPlacaUseCase();
-        repository = Mockito.mock(DomainEventRepository.class);
-        actualizarPlacaUseCase.addRepository(repository);
+        agregarRutaUseCase = new AgregarRutaUseCase();
+        repository= Mockito.mock(DomainEventRepository.class);
+        agregarRutaUseCase.addRepository(repository);
     }
-    @Test
-   public void ActualizarPlacaBus(){
-        //arrage
-        var command = new ActualizacionPlaca(IdBus.of("125"),new Placa("PWA12E"));
-        Mockito.when(repository.getEventsBy(ArgumentMatchers.any())).thenReturn(eventPlacaActualizada());
 
-        //act
+    @Test
+    public void agregarRutasBus(){
+        IdBus idBus = new IdBus("10");
+        IdRuta idRuta = new IdRuta("50");
+        Salida salida = new Salida("Popayan");
+        Destino destino = new Destino("Rosas");
+        Kilometro kilometro = new Kilometro(50);
+        var command = new AgregarRuta(idBus,idRuta,salida,destino,kilometro);
+
+        Mockito.when(repository.getEventsBy(ArgumentMatchers.any())).thenReturn(eventAgregarRutas());
+
         var response = UseCaseHandler.getInstance()
-                .setIdentifyExecutor("125")
-                .syncExecutor(actualizarPlacaUseCase,new RequestCommand<>(command))
+                .setIdentifyExecutor("10")
+                .syncExecutor(agregarRutaUseCase, new RequestCommand<>(command))
                 .orElseThrow();
 
         var events = response.getDomainEvents();
-        //assert
-        PlacaActualizada actualizacionPlaca = (PlacaActualizada) events.get(0);
-        Assertions.assertEquals("sofka.bus.event.PlacaActualizada" ,actualizacionPlaca.type);
-        Assertions.assertEquals("PWA12E",actualizacionPlaca.getPlaca().value());
+        RutasAgregadas rutasAgregadas= (RutasAgregadas) events.get(0);
+        Assertions.assertEquals("Popayan",rutasAgregadas.getSalida().value());
+        Assertions.assertEquals("Rosas",rutasAgregadas.getDestino().value());
     }
-    public List<DomainEvent> eventPlacaActualizada(){
+
+    public List<DomainEvent> eventAgregarRutas(){
         Set<IdPasajero> pasajeroSet = new HashSet<>();
         Set<Ruta> rutaSet = new HashSet<>();
+        rutaSet.add(new Ruta(IdRuta.of("22"),new Salida("Popayan") , new Destino("Cali"),new Kilometro(30)));
         Marca marca = new Marca("Toyota");
         Placa placa = new Placa("XYH04E");
         Capacidad capacidad = new Capacidad(30);
@@ -67,6 +73,4 @@ public class ActualizarPlacaUseCaseTest {
         Bodega bodega = new Bodega(IdBodega.of("12"), new Estado(false) , new Capacidad(50));
         return List.of(new BusCreado(marca,placa,capacidad,pasajeroSet,rutaSet,conductor,bodega));
     }
-
-
 }

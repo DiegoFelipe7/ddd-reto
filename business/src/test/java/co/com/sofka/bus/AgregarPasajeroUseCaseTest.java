@@ -1,11 +1,12 @@
 package co.com.sofka.bus;
 
-import co.com.sofka.bus.commands.ActualizacionPlaca;
+import co.com.sofka.bus.commands.AgregarPasajero;
+import co.com.sofka.bus.commands.CrearBus;
 import co.com.sofka.bus.entitys.Bodega;
 import co.com.sofka.bus.entitys.Conductor;
 import co.com.sofka.bus.entitys.Ruta;
 import co.com.sofka.bus.events.BusCreado;
-import co.com.sofka.bus.events.PlacaActualizada;
+import co.com.sofka.bus.events.PasajerosAgregados;
 import co.com.sofka.bus.values.*;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
@@ -16,47 +17,42 @@ import co.com.sofka.genericvalue.Estado;
 import co.com.sofka.genericvalue.Identificacion;
 import co.com.sofka.genericvalue.Nombre;
 import co.com.sofka.pasajero.values.IdPasajero;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.mockito.ArgumentMatchers;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class ActualizarPlacaUseCaseTest {
-
-
-    private ActualizarPlacaUseCase actualizarPlacaUseCase;
-    DomainEventRepository repository;
-    @BeforeEach
+public class AgregarPasajeroUseCaseTest {
+    private AgregarPasajeroUseCase agregarPasajeroUseCase;
+    private DomainEventRepository repository;
+    @Before
     public void setUp(){
-        actualizarPlacaUseCase= new ActualizarPlacaUseCase();
-        repository = Mockito.mock(DomainEventRepository.class);
-        actualizarPlacaUseCase.addRepository(repository);
+        agregarPasajeroUseCase = new AgregarPasajeroUseCase();
+        repository= Mockito.mock(DomainEventRepository.class);
+        agregarPasajeroUseCase.addRepository(repository);
     }
     @Test
-   public void ActualizarPlacaBus(){
-        //arrage
-        var command = new ActualizacionPlaca(IdBus.of("125"),new Placa("PWA12E"));
-        Mockito.when(repository.getEventsBy(ArgumentMatchers.any())).thenReturn(eventPlacaActualizada());
+    public void agregarPasajeroBus(){
+        var command= new AgregarPasajero(IdBus.of("22"), IdPasajero.of("2"));
+        Mockito.when(repository.getEventsBy(ArgumentMatchers.any())).thenReturn(eventsPasajeroAgregado());
 
-        //act
         var response = UseCaseHandler.getInstance()
-                .setIdentifyExecutor("125")
-                .syncExecutor(actualizarPlacaUseCase,new RequestCommand<>(command))
+                .setIdentifyExecutor("22")
+                .syncExecutor(agregarPasajeroUseCase , new RequestCommand<>(command))
                 .orElseThrow();
+        var event = response.getDomainEvents();
+        PasajerosAgregados pasajeroAgregadoBus =(PasajerosAgregados)  event.get(0);
+        Assertions.assertEquals("sofka.bus.event.PasajerosAgregados" ,pasajeroAgregadoBus.type);
 
-        var events = response.getDomainEvents();
-        //assert
-        PlacaActualizada actualizacionPlaca = (PlacaActualizada) events.get(0);
-        Assertions.assertEquals("sofka.bus.event.PlacaActualizada" ,actualizacionPlaca.type);
-        Assertions.assertEquals("PWA12E",actualizacionPlaca.getPlaca().value());
+
     }
-    public List<DomainEvent> eventPlacaActualizada(){
+
+    private List<DomainEvent> eventsPasajeroAgregado(){
         Set<IdPasajero> pasajeroSet = new HashSet<>();
         Set<Ruta> rutaSet = new HashSet<>();
         Marca marca = new Marca("Toyota");
@@ -67,6 +63,5 @@ public class ActualizarPlacaUseCaseTest {
         Bodega bodega = new Bodega(IdBodega.of("12"), new Estado(false) , new Capacidad(50));
         return List.of(new BusCreado(marca,placa,capacidad,pasajeroSet,rutaSet,conductor,bodega));
     }
-
 
 }
