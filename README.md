@@ -19,3 +19,6 @@ En este repositorio se encuentra la solucion a el reto de DDD. Donde se toma com
 # Modelo de dominio
 
 ![image](https://user-images.githubusercontent.com/90659322/176983180-95d91949-1858-4162-8120-86c077cbb4d9.png)
+
+# Algunos test 
+![image](https://user-images.githubusercontent.com/90659322/176984175-0d8d3485-dee9-4f44-bea3-942d7a9351d7.png)
