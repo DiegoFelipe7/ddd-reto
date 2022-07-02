@@ -15,6 +15,7 @@ import co.com.sofka.trasportadora.entitys.Nomina;
 import co.com.sofka.trasportadora.events.NitModificado;
 import co.com.sofka.trasportadora.events.TrasportadoraCreada;
 import co.com.sofka.trasportadora.values.*;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,7 +37,7 @@ public class ModificarNitUseCaseTest {
     private ModificarNitUseCase modificarNitUseCase;
 
     private DomainEventRepository repository;
-    @BeforeEach
+    @Before
     public void setUp(){
         modificarNitUseCase= new ModificarNitUseCase();
         repository = Mockito.mock(DomainEventRepository.class);
@@ -57,7 +58,7 @@ public class ModificarNitUseCaseTest {
         //assert
         NitModificado NitModificadoTest = (NitModificado) events.get(0);
         Assertions.assertEquals("sofka.trasportadora.event.NitModificado" ,NitModificadoTest.type);
-        Assertions.assertEquals(15046 ,NitModificadoTest.getNit());
+        Assertions.assertEquals(15046 ,NitModificadoTest.getNit().value());
     }
     public List<DomainEvent> eventsNitActualizado(){
         Set<IdBus> busSet = new HashSet<>();
