@@ -23,7 +23,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * Test para crear un pasajero
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 @ExtendWith(MockitoExtension.class)
 public class CrearPasajeroCommandsUseCaseTest {
     @InjectMocks

@@ -1,0 +1,7 @@
+
+M
+java:S2160
+"+Override the "equals" method in this class.(Φ¶αφόÿÿÿÿ8Ίορα›0
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ύρπÿÿÿÿÿ8Κορα›0
+c
+java:S1128"ARemove this unused import 'co.com.sofka.domain.generic.Identity'.(ρ¬΅ωÿÿÿÿ8Ωορα›0

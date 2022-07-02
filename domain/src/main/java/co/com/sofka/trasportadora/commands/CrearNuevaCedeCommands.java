@@ -1,17 +1,18 @@
 package co.com.sofka.trasportadora.commands;
 
+import co.com.sofka.domain.generic.Command;
 import co.com.sofka.genericvalue.Nombre;
 import co.com.sofka.trasportadora.values.IdCede;
 import co.com.sofka.trasportadora.values.IdTrasportadora;
 import co.com.sofka.trasportadora.values.Ubicacion;
 
-public class CrearNuevaCede {
+public class CrearNuevaCedeCommands extends Command {
     private final IdTrasportadora idTrasportadora;
     private final IdCede idCede;
     private final Nombre nombre;
     private final Ubicacion ubicacion;
 
-    public CrearNuevaCede(IdTrasportadora idTrasportadora, IdCede idCede, Nombre nombre, Ubicacion ubicacion) {
+    public CrearNuevaCedeCommands(IdTrasportadora idTrasportadora, IdCede idCede, Nombre nombre, Ubicacion ubicacion) {
         this.idTrasportadora = idTrasportadora;
         this.idCede = idCede;
         this.nombre = nombre;

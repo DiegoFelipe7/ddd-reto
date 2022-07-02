@@ -24,7 +24,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * Test para crear un bus
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 @ExtendWith(MockitoExtension.class)
 public class CrearBusCommandsUseCaseTest {
 
@@ -45,6 +51,7 @@ public class CrearBusCommandsUseCaseTest {
         pasajeroSet.add(IdPasajero.of("1"));
         Conductor conductor = new Conductor(IdConductor.of("12"), new Nombre("Diego"),new Licencia("105887asd") , new Identificacion(1058788349));
         Bodega bodega = new Bodega(IdBodega.of("12"), new Estado(false) , new Capacidad(50));
+
         var command = new CrearBusCommands(idBus,marca,placa,capacidad,pasajeroSet,rutaSet,conductor,bodega);
 
         var events = UseCaseHandler

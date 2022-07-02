@@ -5,17 +5,12 @@ import co.com.sofka.bus.values.IdBus;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.genericvalue.Nombre;
+import co.com.sofka.pasajero.values.Descripcion;
 import co.com.sofka.trasportadora.entitys.Cedes;
 import co.com.sofka.trasportadora.entitys.Contratacion;
 import co.com.sofka.trasportadora.entitys.Nomina;
-import co.com.sofka.trasportadora.events.BusContratado;
-import co.com.sofka.trasportadora.events.CedeNuevaCreada;
-import co.com.sofka.trasportadora.events.NitModificado;
-import co.com.sofka.trasportadora.events.TrasportadoraCreada;
-import co.com.sofka.trasportadora.values.IdCede;
-import co.com.sofka.trasportadora.values.IdTrasportadora;
-import co.com.sofka.trasportadora.values.Nit;
-import co.com.sofka.trasportadora.values.Ubicacion;
+import co.com.sofka.trasportadora.events.*;
+import co.com.sofka.trasportadora.values.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -61,5 +56,15 @@ public class Trasportadora extends AggregateEvent<IdTrasportadora> {
     public void ModificarNit(Nit nit){
         Objects.requireNonNull(nit,"No se permiten valores vacios");
         appendChange(new NitModificado(nit));
+    }
+
+    public void NuevaContratacion(IdContratacion idContratacion, Años años, Monto monto, Motivo motivo, Descripcion descripcion){
+        Objects.requireNonNull(idContratacion,"No se permite campos vacios");
+        Objects.requireNonNull(años,"No se permite campos vacios");
+        Objects.requireNonNull(monto,"No se permite campos vacios");
+        Objects.requireNonNull(motivo,"No se permite campos vacios");
+        Objects.requireNonNull(descripcion,"No se permite campos vacios");
+        appendChange(new ContratacionRealizada(idContratacion,años,monto,motivo,descripcion));
+
     }
 }

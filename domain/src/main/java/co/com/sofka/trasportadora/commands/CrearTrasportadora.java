@@ -1,6 +1,7 @@
 package co.com.sofka.trasportadora.commands;
 
 import co.com.sofka.bus.values.IdBus;
+import co.com.sofka.domain.generic.Command;
 import co.com.sofka.genericvalue.Nombre;
 import co.com.sofka.trasportadora.entitys.Cedes;
 import co.com.sofka.trasportadora.entitys.Contratacion;
@@ -10,7 +11,7 @@ import co.com.sofka.trasportadora.values.Nit;
 
 import java.util.Set;
 
-public class CrearTrasportadora {
+public class CrearTrasportadora extends Command {
     private final IdTrasportadora idTrasportadora;
     private final Nit nit;
     private final Nombre nombre;

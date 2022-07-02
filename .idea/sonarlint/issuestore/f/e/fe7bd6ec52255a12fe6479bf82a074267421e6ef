@@ -1,0 +1,14 @@
+
+
+java:S4165"dRemove this useless assignment; "estado" already holds the assigned value along all execution paths.(·¤Ê8å„Ä¬›0
+H
+java:S2160
+"+Override the "equals" method in this class.(¨ª‰‘8¢òÖ›0
+L
+java:S1656"/Remove or correct this useless self-assignment.(·¤Ê8¤òÖ›0
+L
+java:S1068"*Remove this unused "precio" private field.(¥°Ëøüÿÿÿÿ8è„Ä¬›0
+M
+java:S1068"+Remove this unused "destino" private field.(şã‚¸şÿÿÿÿ8è„Ä¬›0
+K
+java:S1068")Remove this unused "fecha" private field.(Êä¥Íûÿÿÿÿ8è„Ä¬›0

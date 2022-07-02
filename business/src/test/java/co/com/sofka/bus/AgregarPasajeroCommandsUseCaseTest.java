@@ -25,7 +25,13 @@ import org.mockito.Mockito;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+/**
+ * Test para agregar pasajero a bus
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class AgregarPasajeroCommandsUseCaseTest {
     private AgregarPasajeroUseCase agregarPasajeroUseCase;
     private DomainEventRepository repository;

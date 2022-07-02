@@ -25,7 +25,13 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+/**
+ * Test para comprar un ticket
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class ComprarTicketCommandsUseCaseTest {
     private ComprarTicketUseCase comprarTicketUseCase;
 
