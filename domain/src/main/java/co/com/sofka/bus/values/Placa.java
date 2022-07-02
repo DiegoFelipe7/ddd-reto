@@ -3,7 +3,13 @@ package co.com.sofka.bus.values;
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
-
+/**
+ * Objeto de valor tipo String para Placa
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Placa implements ValueObject<String> {
     private final String value;
 

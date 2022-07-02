@@ -15,7 +15,14 @@ import co.com.sofka.pasajero.values.*;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-
+/**
+ * Agregado  raiz  Pasajero
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ * *
+ */
 public class Pasajero extends AggregateEvent<IdPasajero>{
     protected Nombre nombre;
     protected Identificacion identificacion;

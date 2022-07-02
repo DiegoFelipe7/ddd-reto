@@ -4,7 +4,13 @@ import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.genericvalue.Nombre;
 import co.com.sofka.trasportadora.values.IdCede;
 import co.com.sofka.trasportadora.values.Ubicacion;
-
+/**
+ * Entity Cedes
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Cedes extends Entity<IdCede> {
     private Nombre nombre;
     private  Ubicacion ubicacion;

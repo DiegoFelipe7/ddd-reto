@@ -5,6 +5,13 @@ import co.com.sofka.bus.values.IdBodega;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.genericvalue.Estado;
 
+/**
+ * Entity Bodega
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Bodega extends Entity<IdBodega> {
     private Estado estado;
     private Capacidad capacidad;

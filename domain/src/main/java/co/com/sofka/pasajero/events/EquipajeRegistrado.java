@@ -5,7 +5,13 @@ import co.com.sofka.domain.generic.EventChange;
 import co.com.sofka.pasajero.values.Descripcion;
 import co.com.sofka.pasajero.values.IdEquipaje;
 import co.com.sofka.pasajero.values.Peso;
-
+/**
+ * DomainEvent EquipajeRegistrado
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class EquipajeRegistrado extends DomainEvent {
     private final IdEquipaje idEquipaje;
     private final Peso peso;

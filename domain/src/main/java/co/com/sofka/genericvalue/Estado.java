@@ -1,7 +1,13 @@
 package co.com.sofka.genericvalue;
 import co.com.sofka.domain.generic.ValueObject;
 import java.util.Objects;
-
+/**
+ * Objeto de valor tipo boolean para estado
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Estado implements ValueObject<Boolean> {
 
     private final boolean value;

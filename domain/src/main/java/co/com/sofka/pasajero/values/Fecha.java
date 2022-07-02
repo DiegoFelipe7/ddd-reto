@@ -1,8 +1,16 @@
 package co.com.sofka.pasajero.values;
+import co.com.sofka.domain.generic.ValueObject;
+
 import java.time.LocalDate;
 import java.util.Objects;
-
-public class Fecha {
+/**
+ * Objeto de valor tipo LocalDate para Placa
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
+public class Fecha implements ValueObject<LocalDate> {
     private final LocalDate value;
 
     public Fecha(LocalDate value) {
@@ -23,4 +31,8 @@ public class Fecha {
     }
 
 
+    @Override
+    public LocalDate value() {
+        return value;
+    }
 }

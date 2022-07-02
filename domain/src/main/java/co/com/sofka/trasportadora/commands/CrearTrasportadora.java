@@ -11,6 +11,13 @@ import co.com.sofka.trasportadora.values.Nit;
 
 import java.util.Set;
 
+/**
+ * Comando para crear una empresa de trasportadora
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class CrearTrasportadora extends Command {
     private final IdTrasportadora idTrasportadora;
     private final Nit nit;

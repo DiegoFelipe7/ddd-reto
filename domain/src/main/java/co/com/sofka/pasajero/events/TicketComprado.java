@@ -6,7 +6,13 @@ import co.com.sofka.pasajero.values.Fecha;
 import co.com.sofka.pasajero.values.IdTicket;
 import co.com.sofka.pasajero.values.Precio;
 import co.com.sofka.genericvalue.Destino;
-
+/**
+ * DomainEvent TicketComprado
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class TicketComprado extends DomainEvent {
     private final IdTicket idTicket;
     private final Precio precio;

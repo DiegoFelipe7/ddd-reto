@@ -12,6 +12,13 @@ import co.com.sofka.pasajero.values.IdPasajero;
 
 import java.util.Set;
 
+/**
+ * Comando para crear un bus
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class CrearBusCommands extends Command {
     private final IdBus idBus;
     private final Marca marca;

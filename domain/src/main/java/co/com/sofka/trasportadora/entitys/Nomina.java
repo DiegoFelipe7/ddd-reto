@@ -6,7 +6,13 @@ import co.com.sofka.pasajero.values.Fecha;
 import co.com.sofka.trasportadora.values.Colaboradores;
 import co.com.sofka.trasportadora.values.IdNomina;
 import co.com.sofka.trasportadora.values.Monto;
-
+/**
+ * Entity Nomina
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Nomina extends Entity<IdNomina> {
     private Colaboradores colaboradores;
     private Fecha fecha;

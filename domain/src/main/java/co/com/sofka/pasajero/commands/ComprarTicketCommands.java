@@ -8,6 +8,13 @@ import co.com.sofka.pasajero.values.IdPasajero;
 import co.com.sofka.pasajero.values.IdTicket;
 import co.com.sofka.pasajero.values.Precio;
 
+/**
+ * Comando para comprar ticket
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class ComprarTicketCommands extends Command {
     private final IdPasajero idPasajero;
     private final IdTicket idTicket;

@@ -4,6 +4,13 @@ import co.com.sofka.bus.values.IdBus;
 import co.com.sofka.domain.generic.Command;
 import co.com.sofka.trasportadora.values.IdTrasportadora;
 
+/**
+ * Comando para contratar un bus
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class ContrararBus extends Command {
     private IdTrasportadora idTrasportadora;
     private IdBus idBus;

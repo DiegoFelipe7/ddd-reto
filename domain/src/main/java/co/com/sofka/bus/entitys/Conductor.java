@@ -5,7 +5,13 @@ import co.com.sofka.bus.values.Licencia;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.genericvalue.Identificacion;
 import co.com.sofka.genericvalue.Nombre;
-
+/**
+ * Entity Constructor
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Conductor extends Entity<IdConductor> {
     private Nombre nombre;
     private Licencia licencia;

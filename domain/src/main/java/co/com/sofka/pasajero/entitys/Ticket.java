@@ -6,7 +6,13 @@ import co.com.sofka.pasajero.values.Fecha;
 import co.com.sofka.pasajero.values.IdTicket;
 import co.com.sofka.pasajero.values.Precio;
 import co.com.sofka.genericvalue.Destino;
-
+/**
+ * Entity Ticket
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Ticket extends Entity<IdTicket> {
     private Precio precio;
     private Destino destino;

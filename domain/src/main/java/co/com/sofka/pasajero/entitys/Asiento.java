@@ -4,7 +4,13 @@ import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.genericvalue.Estado;
 import co.com.sofka.genericvalue.Identificacion;
 import co.com.sofka.pasajero.values.IdAsiento;
-
+/**
+ * Entity Asiento
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Asiento extends Entity<IdAsiento> {
     private Identificacion identificacion;
     private Estado estado;

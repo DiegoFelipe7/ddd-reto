@@ -4,6 +4,13 @@ import co.com.sofka.domain.generic.Command;
 import co.com.sofka.pasajero.values.Descripcion;
 import co.com.sofka.trasportadora.values.*;
 
+/**
+ * Comando nuevacontratacion
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class NuevaContratacion extends Command {
     private final IdTrasportadora idTrasportadora;
 

@@ -15,7 +15,14 @@ import co.com.sofka.trasportadora.values.*;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-
+/**
+ * Agregado  raiz  Trasportadora
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-06-29
+ * @since 1.0.0
+ * *
+ */
 public class Trasportadora extends AggregateEvent<IdTrasportadora> {
     protected Nit nit;
     protected Nombre nombre;

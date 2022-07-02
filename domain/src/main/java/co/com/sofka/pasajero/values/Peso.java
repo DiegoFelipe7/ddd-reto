@@ -3,7 +3,13 @@ package co.com.sofka.pasajero.values;
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
-
+/**
+ * Objeto de valor tipo Integer para el peso
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class Peso implements ValueObject<Integer> {
     private final Integer value;
 

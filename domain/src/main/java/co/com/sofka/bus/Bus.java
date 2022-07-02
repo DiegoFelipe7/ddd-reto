@@ -16,7 +16,14 @@ import co.com.sofka.pasajero.values.IdPasajero;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-
+/**
+ * Agregado  raiz  Bus
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-07
+ * @since 1.0.0
+ * *
+ */
 public class Bus extends AggregateEvent<IdBus> {
     protected Marca marca;
     protected Placa placa;

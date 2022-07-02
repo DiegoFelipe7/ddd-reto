@@ -6,7 +6,13 @@ import co.com.sofka.trasportadora.values.Años;
 import co.com.sofka.trasportadora.values.IdContratacion;
 import co.com.sofka.trasportadora.values.Monto;
 import co.com.sofka.trasportadora.values.Motivo;
-
+/**
+ * DomainEvent ContratacionRealizada
+ *
+ * @author Diego Felipe Muñoz <diegofelipem99@gmail.com>
+ * @version 1.0.0 2022-07-01
+ * @since 1.0.0
+ */
 public class ContratacionRealizada extends DomainEvent {
     private final IdContratacion idContratacion;
     private final Años años;

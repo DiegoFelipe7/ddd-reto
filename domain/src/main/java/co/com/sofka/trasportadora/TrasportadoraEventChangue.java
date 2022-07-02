@@ -6,7 +6,14 @@ import co.com.sofka.trasportadora.events.BusContratado;
 import co.com.sofka.trasportadora.events.CedeNuevaCreada;
 import co.com.sofka.trasportadora.events.NitModificado;
 import co.com.sofka.trasportadora.events.TrasportadoraCreada;
-
+/**
+ * EvenChangue  trasportadora para el manejo de enventos
+ *
+ * @Version 1.0
+ * @Author Diego Felipe Muñoz Mosquera
+ * @Email diegofelipem99@gmail.com
+ * *
+ */
 public class TrasportadoraEventChangue extends EventChange {
     public TrasportadoraEventChangue(Trasportadora trasportadora){
         apply((TrasportadoraCreada event)->{

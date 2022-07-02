@@ -8,7 +8,14 @@ import co.com.sofka.pasajero.events.PasajeroCreado;
 import co.com.sofka.pasajero.events.TicketComprado;
 
 import java.util.HashSet;
-
+/**
+ * EvenChangue  pasajero para el manejo de enventos
+ *
+ * @Version 1.0
+ * @Author Diego Felipe Muñoz Mosquera
+ * @Email diegofelipem99@gmail.com
+ * *
+ */
 public class PasajeroEventChangue extends EventChange {
     public PasajeroEventChangue(Pasajero pasajero){
         apply((PasajeroCreado event)->{
